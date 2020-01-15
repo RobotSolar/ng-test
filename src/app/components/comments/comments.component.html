@@ -1,0 +1,17 @@
+<div class="card" *ngIf="comments.length">
+  <div class="card-header text-center">
+    <h5 class="card-title">Comments</h5>
+  </div>
+  <div class="card-body">
+
+    <div *ngFor="let comment of comments">
+      <p><b>Name:</b> {{comment.name}}</p>
+      <b>Comment:</b>
+      <p> {{comment.body}}</p>
+      <hr>
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary" (click)="sendDate()">Emitir</button>
+    </div>
+  </div>
+</div>

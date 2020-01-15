@@ -1,0 +1,8 @@
+<div *ngIf="post.id">
+
+  <span style="float:right;" *ngIf="date">Last comment: {{date}}</span>
+  <h5>Detail post: {{post.id}} </h5>
+  <h2>{{post.title}}</h2>
+  <p>{{post.body}}</p>
+  <app-comments [post]="post_id" (emitLastDate)="AddDate($event)"></app-comments>
+</div>

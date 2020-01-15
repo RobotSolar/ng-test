@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+    <th>Id</th>
+    <th>Post</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <td>{{post.id}}</td>
+      <td>{{post.title}}</td>
+      <td><a [routerLink]="['/post', post.id]">Ver</a></td>
+    </tr>
+  </tbody>
+</table>
